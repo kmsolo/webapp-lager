@@ -1,6 +1,7 @@
 export default class HomeView extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+    <div class="content-card">
       <section class="card">
         <h1>Välkommen</h1>
         <p>Det här är startsidan för kmom01 i kursen webapp från dbwebb.</p>
@@ -11,6 +12,7 @@ export default class HomeView extends HTMLElement {
           <p>Välj Om för att läsa mer om kursmomentet.</p>
 
       </section>
+      </div>
     `;
   }
 }

@@ -17,6 +17,7 @@ export default class TotalLager extends HTMLElement {
 
   renderLayout() {
     this.innerHTML = `
+    <div class="content-card">
             <section class="total-lager">
                 <h1>Hela Emil Folinos lager</h1>
 
@@ -50,6 +51,7 @@ export default class TotalLager extends HTMLElement {
 
                 <div class="pagination pagination-bottom"></div>
             </section>
+        </div>
         `;
 
     this.querySelector("#search-products").addEventListener(

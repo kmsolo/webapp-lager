@@ -1,6 +1,7 @@
 export default class ContactView extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+        <div class="content-card">
             <section class="view">
                 <h1>Kontakt</h1>
                 <p>Här hittar du kontaktinformation.</p>
@@ -13,6 +14,7 @@ export default class ContactView extends HTMLElement {
                     <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
                 </ul>
             </section>
+        </div>
         `;
   }
 }

@@ -1,6 +1,7 @@
 export default class AboutView extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+    <div class="content-card">
       <section class="card">
         <h1>Om</h1>
         <p>Här samlar jag allt arbete för kursmomentet kmom01.</p>
@@ -10,6 +11,7 @@ export default class AboutView extends HTMLElement {
         <p>Jag har även skapat en egen komponent som renderar en lista med länkar till de olika sidorna i kursmomentet.</p>
         <pre>Jag har även lagt till en länk till min GitHub-repo, där jag har lagt upp koden för kursmomentet.</pre>
       </section>
+      </div>
     `;
   }
 }

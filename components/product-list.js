@@ -8,6 +8,7 @@ export default class ProductList extends HTMLElement {
       const products = await getProducts();
 
       this.innerHTML = `
+      <div class="content-card">
                 <section class="card">
                     <h2>Lagerlista från vårt lager</h2>
                     <ul class="products">
@@ -30,6 +31,7 @@ export default class ProductList extends HTMLElement {
                           .join("")}
                     </ul>
                 </section>
+      </div>
             `;
 
       this.querySelectorAll(".edit-product").forEach((button) => {
