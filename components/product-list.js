@@ -8,31 +8,26 @@ export default class ProductList extends HTMLElement {
       const products = await getProducts();
 
       this.innerHTML = `
-      <div class="content-card">
-                <section class="card">
-                    <h2>Lagerlista från vårt lager</h2>
-                    <ul class="products">
-                        ${products
-                          .map(
-                            (product) => `
-                                <li class="product-item">
-                                    <h3>${product.name}</h3>
-                                    <p>ID: ${product.id}</p>
-                                    <p>Stock: ${product.stock}</p>
-                                    <p>Location: ${product.location}</p>
-                                    <p>
-                                        <button class="edit-product" data-id="${product.id}">
-                                            Redigera
-                                        </button>
-                                    </p>
-                                </li>
-                            `,
-                          )
-                          .join("")}
-                    </ul>
-                </section>
-      </div>
-            `;
+    <h2 class="section-title">Lagerlista från vårt lager</h2>
+
+    <div class="product-list">
+        ${products
+          .map(
+            (product) => `
+                    <div class="card">
+                        <h3>${product.name}</h3>
+                        <p><strong>ID:</strong> ${product.id}</p>
+                        <p><strong>Lager:</strong> ${product.stock}</p>
+                        <p><strong>Plats:</strong> ${product.location}</p>
+                        <button class="edit-product" data-id="${product.id}">
+                            Redigera
+                        </button>
+                    </div>
+                `,
+          )
+          .join("")}
+    </div>
+`;
 
       this.querySelectorAll(".edit-product").forEach((button) => {
         button.addEventListener("click", (event) => {
