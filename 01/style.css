@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+/* Top header */
+.topbar {
+  background: #ffb3d9;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #fff;
+  padding: 10px;
+  border-bottom: 2px solid #ffb3d9;
+}
+
+.nav-item {
+  margin: 5px 10px;
+  padding: 10px 15px;
+  background: #ffe6f2;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #ffb3d9;
+}
+
+.nav-item:hover {
+  background: #ffb3d9;
+  color: white;
+}
+
+/* Content card */
+.content-card {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #ffb3d9;
+}
+
+.content-card h2 {
+  margin-top: 0;
+  color: #ff66b3;
+}
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #ffb3d9;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #ff66b3;
+}
+
+.section-title {
+  margin: 20px;
+  font-size: 22px;
+  color: #ff66b3;
+}
+
+.edit-btn,
+.edit-product {
+  margin-top: 10px;
+  background: #ff66b3;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-product:hover {
+  background: #ff3385;
+}
