@@ -1,13 +1,2 @@
-import adapter from "@sveltejs/adapter-static";
-
-export default {
-  compilerOptions: {
-    runes: true,
-  },
-  kit: {
-    adapter: adapter({ fallback: "index.html" }),
-    paths: {
-      base: process.env.NODE_ENV === "production" ? "/kmom04" : "",
-    },
-  },
-};
+/** @type {import("@sveltejs/vite-plugin-svelte").SvelteConfig} */
+export default {}

@@ -1,0 +1,629 @@
+/* Mjukt rosa tema (som i del 1). Ändra färgerna här. */
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #222222;
+  --muted: #5f4b57;
+
+  --pink-bg: #fde7f3; /* knappar */
+  --pink-hover: #fbd3e8; /* knappar vid hover/tryck */
+  --pink-border: #f7b3d3; /* ramar på knappar */
+  --card-border: #f1d5e3; /* ramar på kort */
+  --link: #b0165f;
+  --focus: #7a2e55;
+
+  --danger-bg: #fee4e2;
+  --danger-hover: #fdcdc9;
+  --danger-border: #f7a8a2;
+  --danger-text: #912018;
+
+  --ok-bg: #d1fadf;
+  --ok-text: #085d3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+a {
+  color: var(--link);
+}
+
+/* Header */
+.topbar {
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+}
+.header-inner h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-icon-btn,
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0 1rem;
+  color: var(--text);
+  background: var(--pink-bg);
+  border: 1px solid var(--pink-border);
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-icon-btn,
+.nav-btn {
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.nav-icon-btn:hover,
+.nav-btn:hover {
+  background: var(--pink-hover);
+}
+
+/* Rörelse vid hovring: bara på enheter med mus */
+@media (hover: hover) {
+  .nav-icon-btn:hover,
+  .nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(122, 46, 85, 0.18);
+  }
+  .nav-icon-btn:active,
+  .nav-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+/* Respektera inställningen "minska rörelser" */
+@media (prefers-reduced-motion: reduce) {
+  .nav-icon-btn,
+  .nav-btn,
+  .product-card {
+    transition: none;
+  }
+  .nav-icon-btn:hover,
+  .nav-btn:hover,
+  .product-card:hover {
+    transform: none;
+  }
+}
+
+/* Kort och rubriker */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+}
+
+/* Formulär */
+.form {
+  display: grid;
+  gap: 0.4rem;
+}
+.form label {
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+.form input,
+.form select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.7rem;
+  font: inherit;
+  font-size: 1rem; /* undviker zoom på iOS */
+  border: 1px solid var(--pink-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+}
+.form input:focus,
+.form select:focus,
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.error,
+#error {
+  color: var(--danger-text);
+  min-height: 1.25em;
+  margin: 0.25rem 0;
+}
+
+/* Knappar */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.primary-btn,
+.secondary-btn,
+.danger-btn {
+  min-height: 44px;
+  padding: 0 1rem;
+  font: inherit;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.primary-btn {
+  background: var(--pink-bg);
+  color: var(--text);
+  border-color: var(--pink-border);
+}
+.primary-btn:hover {
+  background: var(--pink-hover);
+}
+.secondary-btn {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--pink-border);
+}
+.secondary-btn:hover {
+  background: #fff5fa;
+}
+.danger-btn {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  border-color: var(--danger-border);
+}
+.danger-btn:hover {
+  background: var(--danger-hover);
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Ram runt hela produktlistan */
+.list-frame {
+  border: 2px solid var(--pink-border);
+  border-radius: 16px;
+  padding: 0.75rem;
+  background: #fffafc;
+}
+@media (min-width: 600px) {
+  .list-frame {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+}
+
+/* Produkter: kortvy */
+.product-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(122, 46, 85, 0.06);
+}
+
+/* Lyft kortet bara på enheter med riktig hover (inte på touch) */
+@media (hover: hover) {
+  .product-card {
+    transition:
+      box-shadow 0.15s,
+      transform 0.15s;
+  }
+  .product-card:hover {
+    box-shadow: 0 6px 16px rgba(122, 46, 85, 0.14);
+    transform: translateY(-2px);
+  }
+}
+
+.product-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.product-card-head h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.stock-badge {
+  flex-shrink: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.stock-ok {
+  background: #dcfae6;
+  color: #085d3a;
+}
+.stock-low {
+  background: #fef0c7;
+  color: #93370d;
+}
+.stock-out {
+  background: #fee4e2;
+  color: #912018;
+}
+
+.product-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+.product-meta dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.product-meta dd {
+  margin: 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.product-card .btn-row {
+  margin-top: auto;
+}
+.product-card .btn-row button {
+  flex: 1;
+}
+
+.product-info p {
+  margin: 0.2rem 0;
+}
+.warning-text {
+  color: var(--danger-text);
+  font-weight: 700;
+}
+
+/* Inleveranser */
+.delivery-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+.delivery-item {
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+  pointer-events: none;
+  padding: 0 1rem;
+}
+.toast-message {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  color: var(--ok-text);
+  background: var(--ok-bg);
+  border: 1px solid #a6f4c5;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.toast-error {
+  color: var(--danger-text);
+  background: var(--danger-bg);
+  border-color: var(--danger-border);
+}
+/* =========================================
+   kmom04 – Ordrar, GPS, karta och kamera
+   ========================================= */
+
+/* Samma layout som produktkorten, men för order */
+.order-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.order-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 230px;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(122, 46, 85, 0.06);
+  animation: card-enter 0.28s ease both;
+}
+
+.order-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.order-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.order-card p {
+  margin: 0.2rem 0;
+}
+
+.status-badge {
+  flex-shrink: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-packed {
+  color: var(--ok-text);
+  background: var(--ok-bg);
+}
+
+.order-details {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.order-details strong {
+  display: inline-block;
+  min-width: 5.5rem;
+}
+
+.order-card .btn-row {
+  margin-top: auto;
+}
+
+.order-card .btn-row button,
+.order-card .btn-row a {
+  flex: 1;
+  text-align: center;
+}
+
+/* GPS-resultatet */
+.location-result {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.85rem;
+  margin-top: 0.75rem;
+  background: #fffafc;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+}
+
+.location-result p {
+  margin: 0;
+}
+
+.coordinates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.coordinate {
+  padding: 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+}
+
+.coordinate span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.coordinate strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+/* Enkel yta för karta. Leaflet-kartan monteras här senare. */
+.map-container {
+  width: 100%;
+  min-height: 320px;
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--pink-border);
+  border-radius: 14px;
+  background: #fffafc;
+}
+
+.map-placeholder {
+  display: grid;
+  min-height: 320px;
+  place-items: center;
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Kameraknapp och förhandsgranskning */
+.camera-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.camera-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 1rem;
+  color: var(--text);
+  background: var(--pink-bg);
+  border: 1px solid var(--pink-border);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.camera-label:hover {
+  background: var(--pink-hover);
+}
+
+.camera-preview {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  max-height: 480px;
+  margin-top: 1rem;
+  object-fit: contain;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: #fffafc;
+}
+
+/* Mjuk in-animation när exempelvis orderkort visas */
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: hover) {
+  .order-card {
+    transition:
+      box-shadow 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  .order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(122, 46, 85, 0.14);
+  }
+
+  .camera-label:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .order-card,
+  .camera-label {
+    animation: none;
+    transition: none;
+  }
+
+  .order-card:hover,
+  .camera-label:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .coordinates {
+    grid-template-columns: 1fr;
+  }
+
+  .order-card .btn-row {
+    flex-direction: column;
+  }
+}
+.active-nav {
+  background: var(--pink-hover);
+  box-shadow: inset 0 0 0 1px rgba(122, 46, 85, 0.18);
+}
+
+.order-card {
+  animation: order-card-in 0.25s ease both;
+}
+
+@keyframes order-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
