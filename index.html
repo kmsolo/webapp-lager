@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dbwebbyearone.ddev.site:3013; img-src data:; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webapp Lager – kmom03</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="auth-invoices.css" />
+    <link rel="icon" href="data:," />
+  </head>
+
+  <body>
+    <app-header></app-header>
+    <app-router></app-router>
+
+    <main>
+      <div id="app"></div>
+      <div id="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

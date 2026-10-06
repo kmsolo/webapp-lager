@@ -1,0 +1,146 @@
+/* Tillägg för del 3. Inga inline-styles används (CSP: style-src 'self'). */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: var(--muted);
+  align-self: center;
+}
+
+.auth-switch { margin-top: 1rem; }
+.order-summary { min-height: 1.25em; font-size: 0.9rem; }
+
+.btn-link {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* --- Fakturatabell: kortlayout som standard (mobile first) --- */
+.table-wrap { width: 100%; }
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table thead {
+  /* dolt visuellt men kvar för skärmläsare */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.invoice-table tr {
+  display: block;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.invoice-table th[scope="row"],
+.invoice-table td {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  text-align: right;
+  border: 0;
+}
+
+.invoice-table th[scope="row"] { font-weight: 700; }
+
+.invoice-table th[scope="row"]::before,
+.invoice-table td::before {
+  content: attr(data-label);
+  font-weight: 600;
+  color: var(--muted);
+  text-align: left;
+}
+
+/* --- Bredare skärmar: riktig tabell --- */
+@media (min-width: 720px) {
+  .invoice-table thead {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+
+  .invoice-table tr {
+    display: table-row;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .invoice-table th,
+  .invoice-table td,
+  .invoice-table th[scope="row"] {
+    display: table-cell;
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .invoice-table th[scope="row"]::before,
+  .invoice-table td::before { content: none; }
+
+  .invoice-table thead th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    border-bottom: 2px solid var(--card-border);
+  }
+
+  .invoice-table .num,
+  .invoice-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .invoice-table tbody tr:hover { background: #fff5fa; }
+}
+
+/* --- Om-sidan --- */
+.about-lead { margin-bottom: 1rem; line-height: 1.5; }
+
+.about-item {
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  background: #fff;
+}
+
+.about-item summary {
+  min-height: 44px; /* tryckvänlig yta */
+  padding: 0.7rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.about-item[open] summary { border-bottom: 1px solid var(--card-border); }
+
+.about-body { padding: 0.75rem 0.9rem 0.9rem; line-height: 1.55; }
+.about-body p { margin: 0 0 0.6rem; }
+.about-body ul { margin: 0 0 0.6rem; padding-left: 1.2rem; }
+.about-app { color: var(--text); }

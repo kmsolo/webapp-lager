@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "name": "Hylla 1",
+    "stock": 2,
+    "location": "A1-02"
+  },
+  {
+    "id": 2,
+    "name": "Ryggsäck 2",
+    "stock": 76,
+    "location": "A1-02"
+  },
+  {
+    "id": 3,
+    "name": "Mikrovågsugn 3",
+    "stock": 17,
+    "location": "A1-02"
+  },
+  {
+    "id": 4,
+    "name": "Skärm 4",
+    "stock": 77,
+    "location": "A1-02"
+  },
+  {
+    "id": 5,
+    "name": "Skärm 5",
+    "stock": 83,
+    "location": "B2-03"
+  },
+  {
+    "id": 6,
+    "name": "Skärm 6",
+    "stock": 74,
+    "location": "A1-01"
+  },
+  {
+    "id": 7,
+    "name": "Skärm 7",
+    "stock": 4,
+    "location": "A2-01"
+  },
+  {
+    "id": 8,
+    "name": "Ryggsäck 8",
+    "stock": 69,
+    "location": "D1-05"
+  },
+  {
+    "id": 9,
+    "name": "Mikrovågsugn 9",
+    "stock": 51,
+    "location": "A1-01"
+  },
+  {
+    "id": 10,
+    "name": "Hylla 10",
+    "stock": 39,
+    "location": "A1-02"
+  },
+  {
+    "id": 11,
+    "name": "Hylla 11",
+    "stock": 68,
+    "location": "B1-01"
+  },
+  {
+    "id": 12,
+    "name": "Tangentbord 12",
+    "stock": 66,
+    "location": "A1-02"
+  },
+  {
+    "id": 13,
+    "name": "Skärm 13",
+    "stock": 62,
+    "location": "A1-02"
+  },
+  {
+    "id": 14,
+    "name": "Mikrovågsugn 14",
+    "stock": 69,
+    "location": "A1-02"
+  },
+  {
+    "id": 15,
+    "name": "Skor 15",
+    "stock": 17,
+    "location": "A1-01"
+  },
+  {
+    "id": 16,
+    "name": "Skärm 16",
+    "stock": 83,
+    "location": "B2-03"
+  },
+  {
+    "id": 17,
+    "name": "Högtalare 17",
+    "stock": 83,
+    "location": "C2-02"
+  },
+  {
+    "id": 18,
+    "name": "Tröja 18",
+    "stock": 98,
+    "location": "A2-01"
+  },
+  {
+    "id": 19,
+    "name": "Dammsugare 19",
+    "stock": 75,
+    "location": "B1-01"
+  },
+  {
+    "id": 20,
+    "name": "Tröja 20",
+    "stock": 38,
+    "location": "A1-02"
+  },
+  {
+    "id": 21,
+    "name": "Tröja 21",
+    "stock": 98,
+    "location": "C1-04"
+  },
+  {
+    "id": 22,
+    "name": "Jacka 22",
+    "stock": 28,
+    "location": "D1-05"
+  },
+  {
+    "id": 23,
+    "name": "Ryggsäck 23",
+    "stock": 25,
+    "location": "D1-05"
+  },
+  {
+    "id": 24,
+    "name": "Hylla 24",
+    "stock": 94,
+    "location": "A1-02"
+  },
+  {
+    "id": 25,
+    "name": "Mikrovågsugn 25",
+    "stock": 75,
+    "location": "A1-02"
+  },
+  {
+    "id": 26,
+    "name": "Mus 26",
+    "stock": 93,
+    "location": "C2-02"
+  },
+  {
+    "id": 27,
+    "name": "Väska 27",
+    "stock": 9,
+    "location": "B1-01"
+  },
+  {
+    "id": 28,
+    "name": "Förvaring 28",
+    "stock": 49,
+    "location": "B2-03"
+  },
+  {
+    "id": 29,
+    "name": "Mikrovågsugn 29",
+    "stock": 88,
+    "location": "A1-01"
+  },
+  {
+    "id": 30,
+    "name": "Ryggsäck 30",
+    "stock": 44,
+    "location": "C2-02"
+  },
+  {
+    "id": 31,
+    "name": "Tröja 31",
+    "stock": 6,
+    "location": "A1-01"
+  },
+  {
+    "id": 32,
+    "name": "Tangentbord 32",
+    "stock": 37,
+    "location": "A1-02"
+  },
+  {
+    "id": 33,
+    "name": "Mikrovågsugn 33",
+    "stock": 76,
+    "location": "B1-01"
+  },
+  {
+    "id": 34,
+    "name": "Lampa 34",
+    "stock": 20,
+    "location": "B2-03"
+  },
+  {
+    "id": 35,
+    "name": "Kaffebryggare 35",
+    "stock": 7,
+    "location": "D1-05"
+  },
+  {
+    "id": 36,
+    "name": "Brödrost 36",
+    "stock": 84,
+    "location": "B1-01"
+  },
+  {
+    "id": 37,
+    "name": "Bord 37",
+    "stock": 91,
+    "location": "C1-04"
+  },
+  {
+    "id": 38,
+    "name": "Skor 38",
+    "stock": 81,
+    "location": "D1-05"
+  },
+  {
+    "id": 39,
+    "name": "Brödrost 39",
+    "stock": 50,
+    "location": "C1-04"
+  },
+  {
+    "id": 40,
+    "name": "Mixer 40",
+    "stock": 99,
+    "location": "A2-01"
+  },
+  {
+    "id": 41,
+    "name": "Högtalare 41",
+    "stock": 81,
+    "location": "B2-03"
+  },
+  {
+    "id": 42,
+    "name": "Lampa 42",
+    "stock": 47,
+    "location": "A1-02"
+  },
+  {
+    "id": 43,
+    "name": "Hylla 43",
+    "stock": 60,
+    "location": "B1-01"
+  },
+  {
+    "id": 44,
+    "name": "Kaffebryggare 44",
+    "stock": 43,
+    "location": "D1-05"
+  },
+  {
+    "id": 45,
+    "name": "Ryggsäck 45",
+    "stock": 74,
+    "location": "B1-01"
+  },
+  {
+    "id": 46,
+    "name": "Skor 46",
+    "stock": 55,
+    "location": "B1-01"
+  },
+  {
+    "id": 47,
+    "name": "Vattenkokare 47",
+    "stock": 37,
+    "location": "A2-01"
+  },
+  {
+    "id": 48,
+    "name": "Mus 48",
+    "stock": 82,
+    "location": "B2-03"
+  },
+  {
+    "id": 49,
+    "name": "Mikrovågsugn 49",
+    "stock": 24,
+    "location": "A1-01"
+  },
+  {
+    "id": 50,
+    "name": "Väska 50",
+    "stock": 55,
+    "location": "C2-02"
+  },
+  {
+    "id": 51,
+    "name": "Tröja 51",
+    "stock": 83,
+    "location": "A1-01"
+  },
+  {
+    "id": 52,
+    "name": "Vattenkokare 52",
+    "stock": 41,
+    "location": "C1-04"
+  },
+  {
+    "id": 53,
+    "name": "Kaffebryggare 53",
+    "stock": 33,
+    "location": "B2-03"
+  },
+  {
+    "id": 54,
+    "name": "Skor 54",
+    "stock": 94,
+    "location": "B1-01"
+  },
+  {
+    "id": 55,
+    "name": "Stol 55",
+    "stock": 76,
+    "location": "C2-02"
+  },
+  {
+    "id": 56,
+    "name": "Lampa 56",
+    "stock": 61,
+    "location": "B1-01"
+  },
+  {
+    "id": 57,
+    "name": "Stol 57",
+    "stock": 37,
+    "location": "A1-01"
+  },
+  {
+    "id": 58,
+    "name": "Vattenkokare 58",
+    "stock": 50,
+    "location": "A1-01"
+  },
+  {
+    "id": 59,
+    "name": "Mixer 59",
+    "stock": 60,
+    "location": "B1-01"
+  },
+  {
+    "id": 60,
+    "name": "Brödrost 60",
+    "stock": 96,
+    "location": "B1-01"
+  },
+  {
+    "id": 61,
+    "name": "Tangentbord 61",
+    "stock": 4,
+    "location": "A2-01"
+  },
+  {
+    "id": 62,
+    "name": "Bord 62",
+    "stock": 34,
+    "location": "C2-02"
+  },
+  {
+    "id": 63,
+    "name": "Högtalare 63",
+    "stock": 49,
+    "location": "B2-03"
+  },
+  {
+    "id": 64,
+    "name": "Tröja 64",
+    "stock": 58,
+    "location": "B2-03"
+  },
+  {
+    "id": 65,
+    "name": "Förvaring 65",
+    "stock": 89,
+    "location": "B1-01"
+  },
+  {
+    "id": 66,
+    "name": "Dammsugare 66",
+    "stock": 87,
+    "location": "C1-04"
+  },
+  {
+    "id": 67,
+    "name": "Hylla 67",
+    "stock": 3,
+    "location": "B1-01"
+  },
+  {
+    "id": 68,
+    "name": "Vattenkokare 68",
+    "stock": 28,
+    "location": "B2-03"
+  },
+  {
+    "id": 69,
+    "name": "Vattenkokare 69",
+    "stock": 34,
+    "location": "B1-01"
+  },
+  {
+    "id": 70,
+    "name": "Väska 70",
+    "stock": 55,
+    "location": "B1-01"
+  },
+  {
+    "id": 71,
+    "name": "Jacka 71",
+    "stock": 23,
+    "location": "C2-02"
+  },
+  {
+    "id": 72,
+    "name": "Mikrovågsugn 72",
+    "stock": 51,
+    "location": "C2-02"
+  },
+  {
+    "id": 73,
+    "name": "Brödrost 73",
+    "stock": 68,
+    "location": "A2-01"
+  },
+  {
+    "id": 74,
+    "name": "Brödrost 74",
+    "stock": 94,
+    "location": "B1-01"
+  },
+  {
+    "id": 75,
+    "name": "Mixer 75",
+    "stock": 24,
+    "location": "C1-04"
+  },
+  {
+    "id": 76,
+    "name": "Vattenkokare 76",
+    "stock": 33,
+    "location": "C1-04"
+  },
+  {
+    "id": 77,
+    "name": "Brödrost 77",
+    "stock": 6,
+    "location": "B2-03"
+  },
+  {
+    "id": 78,
+    "name": "Mus 78",
+    "stock": 75,
+    "location": "D1-05"
+  },
+  {
+    "id": 79,
+    "name": "Brödrost 79",
+    "stock": 64,
+    "location": "A1-02"
+  },
+  {
+    "id": 80,
+    "name": "Högtalare 80",
+    "stock": 14,
+    "location": "B2-03"
+  },
+  {
+    "id": 81,
+    "name": "Tangentbord 81",
+    "stock": 5,
+    "location": "A1-02"
+  },
+  {
+    "id": 82,
+    "name": "Tröja 82",
+    "stock": 70,
+    "location": "A2-01"
+  },
+  {
+    "id": 83,
+    "name": "Mikrovågsugn 83",
+    "stock": 5,
+    "location": "B2-03"
+  },
+  {
+    "id": 84,
+    "name": "Väska 84",
+    "stock": 98,
+    "location": "B2-03"
+  },
+  {
+    "id": 85,
+    "name": "Tangentbord 85",
+    "stock": 69,
+    "location": "A2-01"
+  },
+  {
+    "id": 86,
+    "name": "Bord 86",
+    "stock": 52,
+    "location": "C2-02"
+  },
+  {
+    "id": 87,
+    "name": "Dammsugare 87",
+    "stock": 6,
+    "location": "C1-04"
+  },
+  {
+    "id": 88,
+    "name": "Mikrovågsugn 88",
+    "stock": 68,
+    "location": "B1-01"
+  },
+  {
+    "id": 89,
+    "name": "Mikrovågsugn 89",
+    "stock": 78,
+    "location": "A1-01"
+  },
+  {
+    "id": 90,
+    "name": "Väska 90",
+    "stock": 72,
+    "location": "A2-01"
+  },
+  {
+    "id": 91,
+    "name": "Hylla 91",
+    "stock": 89,
+    "location": "C2-02"
+  },
+  {
+    "id": 92,
+    "name": "Kaffebryggare 92",
+    "stock": 69,
+    "location": "C1-04"
+  },
+  {
+    "id": 93,
+    "name": "Jacka 93",
+    "stock": 93,
+    "location": "C2-02"
+  },
+  {
+    "id": 94,
+    "name": "Skor 94",
+    "stock": 17,
+    "location": "D1-05"
+  },
+  {
+    "id": 95,
+    "name": "Tröja 95",
+    "stock": 29,
+    "location": "B2-03"
+  },
+  {
+    "id": 96,
+    "name": "Väska 96",
+    "stock": 53,
+    "location": "A1-01"
+  },
+  {
+    "id": 97,
+    "name": "Vattenkokare 97",
+    "stock": 6,
+    "location": "A1-02"
+  },
+  {
+    "id": 98,
+    "name": "Brödrost 98",
+    "stock": 48,
+    "location": "A2-01"
+  },
+  {
+    "id": 99,
+    "name": "Kaffebryggare 99",
+    "stock": 12,
+    "location": "C2-02"
+  },
+  {
+    "id": 100,
+    "name": "Väska 100",
+    "stock": 35,
+    "location": "A2-01"
+  },
+  {
+    "id": 101,
+    "name": "Dammsugare 101",
+    "stock": 26,
+    "location": "A1-02"
+  },
+  {
+    "id": 102,
+    "name": "Mus 102",
+    "stock": 6,
+    "location": "B2-03"
+  },
+  {
+    "id": 103,
+    "name": "Förvaring 103",
+    "stock": 73,
+    "location": "A1-01"
+  },
+  {
+    "id": 104,
+    "name": "Lampa 104",
+    "stock": 56,
+    "location": "C1-04"
+  },
+  {
+    "id": 105,
+    "name": "Mus 105",
+    "stock": 34,
+    "location": "A2-01"
+  },
+  {
+    "id": 106,
+    "name": "Väska 106",
+    "stock": 50,
+    "location": "C2-02"
+  },
+  {
+    "id": 107,
+    "name": "Brödrost 107",
+    "stock": 95,
+    "location": "B2-03"
+  },
+  {
+    "id": 108,
+    "name": "Kaffebryggare 108",
+    "stock": 21,
+    "location": "A1-01"
+  },
+  {
+    "id": 109,
+    "name": "Kaffebryggare 109",
+    "stock": 80,
+    "location": "C2-02"
+  },
+  {
+    "id": 110,
+    "name": "Tangentbord 110",
+    "stock": 84,
+    "location": "D1-05"
+  },
+  {
+    "id": 111,
+    "name": "Tröja 111",
+    "stock": 10,
+    "location": "B1-01"
+  },
+  {
+    "id": 112,
+    "name": "Tangentbord 112",
+    "stock": 34,
+    "location": "B2-03"
+  },
+  {
+    "id": 113,
+    "name": "Mus 113",
+    "stock": 91,
+    "location": "B2-03"
+  },
+  {
+    "id": 114,
+    "name": "Stol 114",
+    "stock": 59,
+    "location": "A2-01"
+  },
+  {
+    "id": 115,
+    "name": "Vattenkokare 115",
+    "stock": 7,
+    "location": "A1-02"
+  },
+  {
+    "id": 116,
+    "name": "Väska 116",
+    "stock": 35,
+    "location": "B2-03"
+  },
+  {
+    "id": 117,
+    "name": "Vattenkokare 117",
+    "stock": 71,
+    "location": "C2-02"
+  },
+  {
+    "id": 118,
+    "name": "Skor 118",
+    "stock": 91,
+    "location": "A1-01"
+  },
+  {
+    "id": 119,
+    "name": "Tangentbord 119",
+    "stock": 44,
+    "location": "C2-02"
+  },
+  {
+    "id": 120,
+    "name": "Tröja 120",
+    "stock": 55,
+    "location": "B1-01"
+  },
+  {
+    "id": 121,
+    "name": "Jacka 121",
+    "stock": 22,
+    "location": "B1-01"
+  },
+  {
+    "id": 122,
+    "name": "Kaffebryggare 122",
+    "stock": 59,
+    "location": "A1-01"
+  },
+  {
+    "id": 123,
+    "name": "Jacka 123",
+    "stock": 96,
+    "location": "A1-02"
+  },
+  {
+    "id": 124,
+    "name": "Mixer 124",
+    "stock": 30,
+    "location": "B1-01"
+  },
+  {
+    "id": 125,
+    "name": "Kaffebryggare 125",
+    "stock": 70,
+    "location": "B1-01"
+  },
+  {
+    "id": 126,
+    "name": "Ryggsäck 126",
+    "stock": 32,
+    "location": "C2-02"
+  },
+  {
+    "id": 127,
+    "name": "Vattenkokare 127",
+    "stock": 60,
+    "location": "A1-01"
+  },
+  {
+    "id": 128,
+    "name": "Brödrost 128",
+    "stock": 92,
+    "location": "D1-05"
+  },
+  {
+    "id": 129,
+    "name": "Mus 129",
+    "stock": 74,
+    "location": "B2-03"
+  },
+  {
+    "id": 130,
+    "name": "Mixer 130",
+    "stock": 97,
+    "location": "C1-04"
+  },
+  {
+    "id": 131,
+    "name": "Kaffebryggare 131",
+    "stock": 46,
+    "location": "A1-02"
+  },
+  {
+    "id": 132,
+    "name": "Bord 132",
+    "stock": 28,
+    "location": "C2-02"
+  },
+  {
+    "id": 133,
+    "name": "Kaffebryggare 133",
+    "stock": 75,
+    "location": "A1-02"
+  },
+  {
+    "id": 134,
+    "name": "Högtalare 134",
+    "stock": 7,
+    "location": "D1-05"
+  },
+  {
+    "id": 135,
+    "name": "Väska 135",
+    "stock": 69,
+    "location": "A1-02"
+  },
+  {
+    "id": 136,
+    "name": "Tröja 136",
+    "stock": 18,
+    "location": "D1-05"
+  },
+  {
+    "id": 137,
+    "name": "Vattenkokare 137",
+    "stock": 61,
+    "location": "C1-04"
+  },
+  {
+    "id": 138,
+    "name": "Bord 138",
+    "stock": 71,
+    "location": "C2-02"
+  },
+  {
+    "id": 139,
+    "name": "Brödrost 139",
+    "stock": 64,
+    "location": "C1-04"
+  },
+  {
+    "id": 140,
+    "name": "Ryggsäck 140",
+    "stock": 26,
+    "location": "A1-02"
+  },
+  {
+    "id": 141,
+    "name": "Ryggsäck 141",
+    "stock": 81,
+    "location": "A1-02"
+  },
+  {
+    "id": 142,
+    "name": "Ryggsäck 142",
+    "stock": 82,
+    "location": "A1-02"
+  },
+  {
+    "id": 143,
+    "name": "Mus 143",
+    "stock": 59,
+    "location": "A2-01"
+  },
+  {
+    "id": 144,
+    "name": "Stol 144",
+    "stock": 42,
+    "location": "D1-05"
+  },
+  {
+    "id": 145,
+    "name": "Bord 145",
+    "stock": 35,
+    "location": "B2-03"
+  },
+  {
+    "id": 146,
+    "name": "Stol 146",
+    "stock": 59,
+    "location": "C1-04"
+  },
+  {
+    "id": 147,
+    "name": "Tangentbord 147",
+    "stock": 32,
+    "location": "A1-01"
+  },
+  {
+    "id": 148,
+    "name": "Stol 148",
+    "stock": 72,
+    "location": "A2-01"
+  },
+  {
+    "id": 149,
+    "name": "Mikrovågsugn 149",
+    "stock": 11,
+    "location": "B1-01"
+  },
+  {
+    "id": 150,
+    "name": "Förvaring 150",
+    "stock": 73,
+    "location": "A1-01"
+  },
+  {
+    "id": 151,
+    "name": "Mus 151",
+    "stock": 3,
+    "location": "B2-03"
+  },
+  {
+    "id": 152,
+    "name": "Kaffebryggare 152",
+    "stock": 47,
+    "location": "A1-01"
+  },
+  {
+    "id": 153,
+    "name": "Bord 153",
+    "stock": 7,
+    "location": "A1-01"
+  },
+  {
+    "id": 154,
+    "name": "Ryggsäck 154",
+    "stock": 37,
+    "location": "C1-04"
+  },
+  {
+    "id": 155,
+    "name": "Hylla 155",
+    "stock": 77,
+    "location": "A2-01"
+  },
+  {
+    "id": 156,
+    "name": "Mikrovågsugn 156",
+    "stock": 14,
+    "location": "A1-02"
+  },
+  {
+    "id": 157,
+    "name": "Mikrovågsugn 157",
+    "stock": 80,
+    "location": "C1-04"
+  },
+  {
+    "id": 158,
+    "name": "Mixer 158",
+    "stock": 54,
+    "location": "C2-02"
+  },
+  {
+    "id": 159,
+    "name": "Kaffebryggare 159",
+    "stock": 6,
+    "location": "C2-02"
+  },
+  {
+    "id": 160,
+    "name": "Brödrost 160",
+    "stock": 59,
+    "location": "C1-04"
+  },
+  {
+    "id": 161,
+    "name": "Mus 161",
+    "stock": 75,
+    "location": "A2-01"
+  },
+  {
+    "id": 162,
+    "name": "Dammsugare 162",
+    "stock": 96,
+    "location": "D1-05"
+  },
+  {
+    "id": 163,
+    "name": "Tangentbord 163",
+    "stock": 12,
+    "location": "A1-01"
+  },
+  {
+    "id": 164,
+    "name": "Ryggsäck 164",
+    "stock": 69,
+    "location": "A1-01"
+  },
+  {
+    "id": 165,
+    "name": "Vattenkokare 165",
+    "stock": 10,
+    "location": "D1-05"
+  },
+  {
+    "id": 166,
+    "name": "Vattenkokare 166",
+    "stock": 32,
+    "location": "A1-02"
+  },
+  {
+    "id": 167,
+    "name": "Mixer 167",
+    "stock": 74,
+    "location": "C1-04"
+  },
+  {
+    "id": 168,
+    "name": "Tangentbord 168",
+    "stock": 13,
+    "location": "A1-02"
+  },
+  {
+    "id": 169,
+    "name": "Högtalare 169",
+    "stock": 16,
+    "location": "C1-04"
+  },
+  {
+    "id": 170,
+    "name": "Dammsugare 170",
+    "stock": 15,
+    "location": "B2-03"
+  },
+  {
+    "id": 171,
+    "name": "Tröja 171",
+    "stock": 71,
+    "location": "A1-01"
+  },
+  {
+    "id": 172,
+    "name": "Vattenkokare 172",
+    "stock": 75,
+    "location": "A1-02"
+  },
+  {
+    "id": 173,
+    "name": "Bord 173",
+    "stock": 50,
+    "location": "C2-02"
+  },
+  {
+    "id": 174,
+    "name": "Skor 174",
+    "stock": 7,
+    "location": "B1-01"
+  },
+  {
+    "id": 175,
+    "name": "Förvaring 175",
+    "stock": 21,
+    "location": "A1-01"
+  },
+  {
+    "id": 176,
+    "name": "Väska 176",
+    "stock": 40,
+    "location": "A1-02"
+  },
+  {
+    "id": 177,
+    "name": "Ryggsäck 177",
+    "stock": 87,
+    "location": "B1-01"
+  },
+  {
+    "id": 178,
+    "name": "Ryggsäck 178",
+    "stock": 83,
+    "location": "D1-05"
+  },
+  {
+    "id": 179,
+    "name": "Kaffebryggare 179",
+    "stock": 75,
+    "location": "D1-05"
+  },
+  {
+    "id": 180,
+    "name": "Högtalare 180",
+    "stock": 76,
+    "location": "B1-01"
+  },
+  {
+    "id": 181,
+    "name": "Ryggsäck 181",
+    "stock": 54,
+    "location": "D1-05"
+  },
+  {
+    "id": 182,
+    "name": "Dammsugare 182",
+    "stock": 72,
+    "location": "A2-01"
+  },
+  {
+    "id": 183,
+    "name": "Mus 183",
+    "stock": 82,
+    "location": "D1-05"
+  },
+  {
+    "id": 184,
+    "name": "Ryggsäck 184",
+    "stock": 20,
+    "location": "C2-02"
+  },
+  {
+    "id": 185,
+    "name": "Lampa 185",
+    "stock": 21,
+    "location": "C1-04"
+  },
+  {
+    "id": 186,
+    "name": "Stol 186",
+    "stock": 30,
+    "location": "B2-03"
+  },
+  {
+    "id": 187,
+    "name": "Mixer 187",
+    "stock": 35,
+    "location": "A1-01"
+  },
+  {
+    "id": 188,
+    "name": "Vattenkokare 188",
+    "stock": 26,
+    "location": "D1-05"
+  },
+  {
+    "id": 189,
+    "name": "Jacka 189",
+    "stock": 15,
+    "location": "A1-01"
+  },
+  {
+    "id": 190,
+    "name": "Lampa 190",
+    "stock": 45,
+    "location": "A1-01"
+  },
+  {
+    "id": 191,
+    "name": "Skor 191",
+    "stock": 79,
+    "location": "B2-03"
+  },
+  {
+    "id": 192,
+    "name": "Lampa 192",
+    "stock": 21,
+    "location": "B2-03"
+  },
+  {
+    "id": 193,
+    "name": "Stol 193",
+    "stock": 11,
+    "location": "C1-04"
+  },
+  {
+    "id": 194,
+    "name": "Hylla 194",
+    "stock": 48,
+    "location": "A1-01"
+  },
+  {
+    "id": 195,
+    "name": "Bord 195",
+    "stock": 83,
+    "location": "A1-02"
+  },
+  {
+    "id": 196,
+    "name": "Ryggsäck 196",
+    "stock": 64,
+    "location": "B1-01"
+  },
+  {
+    "id": 197,
+    "name": "Högtalare 197",
+    "stock": 1,
+    "location": "B2-03"
+  },
+  {
+    "id": 198,
+    "name": "Mikrovågsugn 198",
+    "stock": 64,
+    "location": "A2-01"
+  },
+  {
+    "id": 199,
+    "name": "Dammsugare 199",
+    "stock": 37,
+    "location": "A2-01"
+  },
+  {
+    "id": 200,
+    "name": "Skor 200",
+    "stock": 74,
+    "location": "B2-03"
+  }
+]
