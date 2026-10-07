@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte'
   import { fade, fly } from 'svelte/transition'
 
   let activeView = 'products'
@@ -8,17 +9,155 @@
   let selectedImageUrl = ''
   let selectedOrder = null
 
-  const products = [
-    { id: 1, name: 'Hammare', stock: 750, location: 'A1' },
-    { id: 2, name: 'Skor Svarta Strl 45', stock: 260, location: 'S-S 45' },
-    { id: 3, name: 'Borrmaskin Edix 250', stock: 100, location: 'B-E-10' },
-    { id: 4, name: 'Mutter M 14', stock: 5000, location: 'M-a-10' },
-    { id: 5, name: 'Skruv M10', stock: 500, location: 'M-A10' },
-    { id: 6, name: 'Skruv M8', stock: 500, location: 'M-A08' },
-    { id: 7, name: 'Mutter M 6', stock: 500, location: 'M-A06' },
-    { id: 8, name: 'Mutter M 12', stock: 300, location: 'M-A12' },
-    { id: 9, name: 'Skruv M08', stock: 655, location: 'S-M08' },
-  ]
+  let products = []
+  let productsError = ''
+  let loadingProducts = true
+let productForm = {
+  id: null,
+  name: '',
+  stock: '',
+  location: '',
+}
+
+let productMessage = ''
+let productFormError = ''
+let savingProduct = false
+
+function resetProductForm() {
+  productForm = {
+    id: null,
+    name: '',
+    stock: '',
+    location: '',
+  }
+
+  productMessage = ''
+  productFormError = ''
+}
+
+function openNewProduct() {
+  resetProductForm()
+  activeView = 'new-product'
+}
+
+function openEditProduct(product) {
+  productForm = {
+    id: product.id,
+    name: product.name,
+    stock: String(product.stock),
+    location: product.location,
+  }
+
+  productMessage = ''
+  productFormError = ''
+  activeView = 'edit-product'
+}
+
+async function saveProduct() {
+  productFormError = ''
+  productMessage = ''
+
+  const name = productForm.name.trim()
+  const location = productForm.location.trim()
+  const stock = Number(productForm.stock)
+
+  if (!name || !location || !Number.isFinite(stock) || stock < 0) {
+    productFormError =
+      'Fyll i produktnamn, lagerplats och ett lagersaldo som är noll eller större.'
+    return
+  }
+
+  savingProduct = true
+
+  try {
+    const isEdit = productForm.id !== null
+    const url = isEdit
+      ? `http://localhost:3001/products/${productForm.id}`
+      : 'http://localhost:3001/products'
+
+    const response = await fetch(url, {
+      method: isEdit ? 'PUT' : 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        stock,
+        location,
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`HTTP-fel: ${response.status}`)
+    }
+
+    await loadProducts()
+
+    productMessage = isEdit
+      ? 'Produkten har uppdaterats.'
+      : 'Produkten har lagts till.'
+
+    activeView = 'products'
+    resetProductForm()
+  } catch (error) {
+    console.error('Kunde inte spara produkt:', error)
+    productFormError = 'Kunde inte spara produkten. Kontrollera att API-servern körs.'
+  } finally {
+    savingProduct = false
+  }
+}
+
+async function deleteProduct(product) {
+  const confirmed = window.confirm(
+    `Vill du verkligen ta bort "${product.name}"?`,
+  )
+
+  if (!confirmed) {
+    return
+  }
+
+  try {
+    const response = await fetch(
+      `http://localhost:3001/products/${product.id}`,
+      {
+        method: 'DELETE',
+      },
+    )
+
+    if (!response.ok) {
+      throw new Error(`HTTP-fel: ${response.status}`)
+    }
+
+    await loadProducts()
+  } catch (error) {
+    console.error('Kunde inte ta bort produkt:', error)
+    productsError = 'Kunde inte ta bort produkten. Kontrollera API-servern.'
+  }
+}
+  async function loadProducts() {
+    try {
+      const response = await fetch('http://localhost:3001/products')
+
+      if (!response.ok) {
+        throw new Error(`HTTP-fel: ${response.status}`)
+      }
+
+      products = await response.json()
+    } catch (error) {
+      console.error('Kunde inte hämta produkter:', error)
+      productsError = 'Kunde inte hämta produkter från den lokala databasen.'
+    } finally {
+      loadingProducts = false
+    }
+  }
+
+  onMount(() => {
+    loadProducts()
+  })
+  function showView(view) {
+  activeView = view
+  selectedOrder = null
+}
 
   const orders = [
     {
@@ -44,92 +183,8 @@
     },
   ]
 
-  function showView(view) {
-    activeView = view
-    selectedOrder = null
-  }
-
-  function getStockClass(stock) {
-    if (stock <= 0) return 'stock-out'
-    if (stock < 100) return 'stock-low'
-    return 'stock-ok'
-  }
-
-  function getLocation() {
-    locationError = ''
-    location = null
-
-    if (!navigator.geolocation) {
-      locationError = 'Din webbläsare har inte stöd för GPS-positionering.'
-      return
-    }
-
-    gettingLocation = true
-
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        location = {
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-          accuracy: Math.round(position.coords.accuracy),
-        }
-
-        gettingLocation = false
-      },
-      (error) => {
-        const errors = {
-          1: 'Du nekade tillåtelse att använda positionen.',
-          2: 'Det gick inte att fastställa positionen.',
-          3: 'Tidsgränsen för att hämta positionen gick ut.',
-        }
-
-        locationError = errors[error.code] ?? 'Ett okänt fel uppstod vid GPS-hämtning.'
-        gettingLocation = false
-      },
-      {
-        enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 0,
-      },
-    )
-  }
-
-  function openMap() {
-    if (!location) {
-      return
-    }
-
-    const { latitude, longitude } = location
-    const mapUrl = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=16/${latitude}/${longitude}`
-
-    window.open(mapUrl, '_blank', 'noopener,noreferrer')
-  }
-
-  function handleImageChange(event) {
-    const image = event.currentTarget.files?.[0]
-
-    if (!image) {
-      return
-    }
-
-    if (selectedImageUrl) {
-      URL.revokeObjectURL(selectedImageUrl)
-    }
-
-    selectedImageUrl = URL.createObjectURL(image)
-  }
-
-  function openOrder(order) {
-    selectedOrder = order
-    activeView = 'order-details'
-  }
-
-  function backToOrders() {
-    selectedOrder = null
-    activeView = 'orders'
-  }
+  // Resten av dina funktioner fortsätter under detta block...
 </script>
-
 <svelte:head>
   <title>Lagerapp – Del 4</title>
   <meta
@@ -146,7 +201,9 @@
       <button class="nav-btn" class:active-nav={activeView === 'products'} on:click={() => showView('products')}>
         📦 Produkter
       </button>
-
+<button class="nav-btn" on:click={openNewProduct}>
+  🎁 Ny produkt
+</button>
       <button class="nav-btn" class:active-nav={activeView === 'orders'} on:click={() => showView('orders')}>
         🚚 Ordrar
       </button>
@@ -196,14 +253,93 @@
                 </dl>
 
                 <div class="btn-row">
-                  <button class="primary-btn" type="button">Redigera</button>
-                  <button class="danger-btn" type="button">Ta bort</button>
-                </div>
+  <button
+    class="primary-btn"
+    type="button"
+    on:click={() => openEditProduct(product)}
+  >
+    Redigera
+  </button>
+
+  <button
+    class="danger-btn"
+    type="button"
+    on:click={() => deleteProduct(product)}
+  >
+    Ta bort
+  </button>
+</div>
               </article>
             {/each}
           </div>
         </section>
 
+      {:else if activeView === 'new-product' || activeView === 'edit-product'}
+  <section class="card" aria-labelledby="product-form-title">
+    <h2 id="product-form-title" class="section-title">
+      {activeView === 'edit-product' ? 'Redigera produkt' : 'Ny produkt'}
+    </h2>
+
+    <form
+      class="form"
+      on:submit|preventDefault={saveProduct}
+    >
+      <label for="product-name">Produktnamn</label>
+      <input
+        id="product-name"
+        type="text"
+        bind:value={productForm.name}
+        required
+        autocomplete="off"
+      />
+
+      <label for="product-stock">Lagersaldo</label>
+      <input
+        id="product-stock"
+        type="number"
+        min="0"
+        step="1"
+        bind:value={productForm.stock}
+        required
+      />
+
+      <label for="product-location">Lagerplats</label>
+      <input
+        id="product-location"
+        type="text"
+        bind:value={productForm.location}
+        required
+        autocomplete="off"
+      />
+
+      {#if productFormError}
+        <p class="error" role="alert">{productFormError}</p>
+      {/if}
+
+      <div class="btn-row">
+        <button
+          class="primary-btn"
+          type="submit"
+          disabled={savingProduct}
+        >
+          {savingProduct
+            ? 'Sparar...'
+            : activeView === 'edit-product'
+              ? 'Spara ändringar'
+              : 'Lägg till produkt'}
+        </button>
+
+        <button
+          class="secondary-btn"
+          type="button"
+          on:click={() => showView('products')}
+          disabled={savingProduct}
+        >
+          Avbryt
+        </button>
+      </div>
+    </form>
+  </section>  
       {:else if activeView === 'orders'}
         <section class="list-frame" aria-labelledby="orders-title">
           <h2 id="orders-title" class="section-title">Ordrar redo att skickas</h2>
