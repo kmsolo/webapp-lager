@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "api": "node api/server.js"
+    "api": "node api/server.js",
+    "migrate:customers": "node api/migrate-customers.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.0",
@@ -15,10 +16,14 @@
     "vite": "^8.3.0"
   },
   "dependencies": {
+    "@uploadcare/upload-client": "^6.23.0",
     "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
+    "leaflet": "^1.9.4",
+    "multer": "^2.4.0",
     "sqlite": "^5.1.1",
     "sqlite3": "^6.0.1"
   }

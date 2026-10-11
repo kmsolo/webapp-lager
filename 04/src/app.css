@@ -5,10 +5,10 @@
   --text: #222222;
   --muted: #5f4b57;
 
-  --pink-bg: #fde7f3; /* knappar */
-  --pink-hover: #fbd3e8; /* knappar vid hover/tryck */
-  --pink-border: #f7b3d3; /* ramar på knappar */
-  --card-border: #f1d5e3; /* ramar på kort */
+  --pink-bg: #fde7f3;
+  --pink-hover: #fbd3e8;
+  --pink-border: #f7b3d3;
+  --card-border: #f1d5e3;
   --link: #b0165f;
   --focus: #7a2e55;
 
@@ -38,6 +38,7 @@ main {
   margin: 0 auto;
   padding: 1rem;
 }
+
 a {
   color: var(--link);
 }
@@ -49,6 +50,7 @@ a {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--card-border);
 }
+
 .header-inner {
   max-width: 960px;
   margin: 0 auto;
@@ -57,10 +59,12 @@ a {
   align-items: center;
   gap: 0.6rem 1rem;
 }
+
 .header-inner h1 {
   font-size: 1.1rem;
   margin: 0;
 }
+
 .app-nav {
   display: flex;
   flex-wrap: wrap;
@@ -82,20 +86,17 @@ a {
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-}
-.nav-icon-btn,
-.nav-btn {
   transition:
     background 0.15s ease,
     transform 0.15s ease,
     box-shadow 0.15s ease;
 }
+
 .nav-icon-btn:hover,
 .nav-btn:hover {
   background: var(--pink-hover);
 }
 
-/* Rörelse vid hovring: bara på enheter med mus */
 @media (hover: hover) {
   .nav-icon-btn:hover,
   .nav-btn:hover {
@@ -109,20 +110,6 @@ a {
   }
 }
 
-/* Respektera inställningen "minska rörelser" */
-@media (prefers-reduced-motion: reduce) {
-  .nav-icon-btn,
-  .nav-btn,
-  .product-card {
-    transition: none;
-  }
-  .nav-icon-btn:hover,
-  .nav-btn:hover,
-  .product-card:hover {
-    transform: none;
-  }
-}
-
 /* Kort och rubriker */
 .card {
   background: var(--surface);
@@ -131,6 +118,7 @@ a {
   padding: 1rem;
   margin-bottom: 1rem;
 }
+
 .section-title {
   margin: 0 0 1rem;
   font-size: 1.35rem;
@@ -141,22 +129,25 @@ a {
   display: grid;
   gap: 0.4rem;
 }
+
 .form label {
   font-weight: 700;
   margin-top: 0.4rem;
 }
+
 .form input,
 .form select {
   width: 100%;
   min-height: 44px;
   padding: 0.5rem 0.7rem;
   font: inherit;
-  font-size: 1rem; /* undviker zoom på iOS */
+  font-size: 1rem;
   border: 1px solid var(--pink-border);
   border-radius: 10px;
   background: #fff;
   color: var(--text);
 }
+
 .form input:focus,
 .form select:focus,
 button:focus-visible,
@@ -165,6 +156,7 @@ summary:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
 }
+
 .error,
 #error {
   color: var(--danger-text);
@@ -179,6 +171,7 @@ summary:focus-visible {
   gap: 0.5rem;
   margin-top: 0.75rem;
 }
+
 .primary-btn,
 .secondary-btn,
 .danger-btn {
@@ -190,30 +183,37 @@ summary:focus-visible {
   border: 1px solid transparent;
   cursor: pointer;
 }
+
 .primary-btn {
   background: var(--pink-bg);
   color: var(--text);
   border-color: var(--pink-border);
 }
+
 .primary-btn:hover {
   background: var(--pink-hover);
 }
+
 .secondary-btn {
   background: #fff;
   color: var(--text);
   border-color: var(--pink-border);
 }
+
 .secondary-btn:hover {
   background: #fff5fa;
 }
+
 .danger-btn {
   background: var(--danger-bg);
   color: var(--danger-text);
   border-color: var(--danger-border);
 }
+
 .danger-btn:hover {
   background: var(--danger-hover);
 }
+
 button:disabled {
   opacity: 0.55;
   cursor: not-allowed;
@@ -226,6 +226,7 @@ button:disabled {
   padding: 0.75rem;
   background: #fffafc;
 }
+
 @media (min-width: 600px) {
   .list-frame {
     padding: 1rem 1.25rem 1.25rem;
@@ -250,7 +251,6 @@ button:disabled {
   box-shadow: 0 1px 2px rgba(122, 46, 85, 0.06);
 }
 
-/* Lyft kortet bara på enheter med riktig hover (inte på touch) */
 @media (hover: hover) {
   .product-card {
     transition:
@@ -269,6 +269,7 @@ button:disabled {
   align-items: flex-start;
   gap: 0.75rem;
 }
+
 .product-card-head h3 {
   margin: 0;
   font-size: 1.1rem;
@@ -284,14 +285,17 @@ button:disabled {
   font-weight: 700;
   white-space: nowrap;
 }
+
 .stock-ok {
   background: #dcfae6;
   color: #085d3a;
 }
+
 .stock-low {
   background: #fef0c7;
   color: #93370d;
 }
+
 .stock-out {
   background: #fee4e2;
   color: #912018;
@@ -306,12 +310,14 @@ button:disabled {
   border-top: 1px solid var(--card-border);
   border-bottom: 1px solid var(--card-border);
 }
+
 .product-meta dt {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--muted);
 }
+
 .product-meta dd {
   margin: 0;
   font-weight: 700;
@@ -321,6 +327,7 @@ button:disabled {
 .product-card .btn-row {
   margin-top: auto;
 }
+
 .product-card .btn-row button {
   flex: 1;
 }
@@ -328,6 +335,7 @@ button:disabled {
 .product-info p {
   margin: 0.2rem 0;
 }
+
 .warning-text {
   color: var(--danger-text);
   font-weight: 700;
@@ -341,6 +349,7 @@ button:disabled {
   display: grid;
   gap: 0.6rem;
 }
+
 .delivery-item {
   border: 1px solid var(--card-border);
   border-radius: 10px;
@@ -359,6 +368,7 @@ button:disabled {
   pointer-events: none;
   padding: 0 1rem;
 }
+
 .toast-message {
   padding: 0.7rem 1rem;
   border-radius: 10px;
@@ -368,11 +378,13 @@ button:disabled {
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
+
 .toast-error {
   color: var(--danger-text);
   background: var(--danger-bg);
   border-color: var(--danger-border);
 }
+
 /* =========================================
    kmom04 – Ordrar, GPS, karta och kamera
    ========================================= */
@@ -492,6 +504,12 @@ button:disabled {
 }
 
 /* Enkel yta för karta. Leaflet-kartan monteras här senare. */
+.map {
+  height: 320px;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
 .map-container {
   width: 100%;
   min-height: 320px;
@@ -561,7 +579,6 @@ button:disabled {
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -574,39 +591,28 @@ button:disabled {
       box-shadow 0.15s ease,
       transform 0.15s ease;
   }
-
   .order-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(122, 46, 85, 0.14);
   }
-
   .camera-label:hover {
     transform: translateY(-2px);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .order-card,
-  .camera-label {
-    animation: none;
+  .nav-icon-btn,
+  .nav-btn,
+  .product-card {
     transition: none;
   }
-
-  .order-card:hover,
-  .camera-label:hover {
+  .nav-icon-btn:hover,
+  .nav-btn:hover,
+  .product-card:hover {
     transform: none;
   }
 }
 
-@media (max-width: 480px) {
-  .coordinates {
-    grid-template-columns: 1fr;
-  }
-
-  .order-card .btn-row {
-    flex-direction: column;
-  }
-}
 .active-nav {
   background: var(--pink-hover);
   box-shadow: inset 0 0 0 1px rgba(122, 46, 85, 0.18);
@@ -621,7 +627,6 @@ button:disabled {
     opacity: 0;
     transform: translateY(8px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
